@@ -3,7 +3,7 @@ class CreateTexts < ActiveRecord::Migration[6.0]
     create_table :texts do |t|
       t.string :genre
       t.string :title
-      t.string :content
+      t.text :content
 
       t.timestamps
     end
