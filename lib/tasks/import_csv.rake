@@ -17,15 +17,15 @@ namespace :import_csv do
     # インポートができなかった場合の例外処理
     begin
       Movie.create!(list)
-      puts "インポート完了!!"
+      puts "インポート完了!!".green
     rescue => e
       # 例外が発生した場合の処理
       # インポートができなかった場合の例外処理
-      puts "#{e.class}: #{e.message}"
+      puts "#{e.class}: #{e.message}".red
       puts "-------------------------"
       puts e.backtrace # 例外が発生した位置情報
       puts "-------------------------"
-      puts "インポートに失敗"
+      puts "インポートに失敗".red
     end
   end
 end
