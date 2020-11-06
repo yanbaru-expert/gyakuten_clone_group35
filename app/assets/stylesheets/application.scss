@@ -10,3 +10,14 @@
   margin: 0 auto;
   padding: 1rem;
 }
+
+body {
+  padding-top: 56px;
+}
+
+// ログイン画面
+.container-login {
+  @extend .container-fluid;
+  max-width: 576px;
+  padding: 2rem;
+}
