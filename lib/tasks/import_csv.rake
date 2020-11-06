@@ -13,13 +13,13 @@ namespace :import_csv do
       Text.transaction do
         Text.create!(list)
       end
-        puts "インポート完了"
+        puts "テキスト教材のインポート完了"
     rescue => e
       puts "#{e.class}: #{e.message}"
       puts "------------------------"
       puts e.backtrace
       puts "------------------------"
-      puts "インポートに失敗"
+      puts "テキスト教材のインポートに失敗"
     end
   end
 end
