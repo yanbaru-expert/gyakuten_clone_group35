@@ -12,13 +12,11 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
-# ログイン機能
-gem 'devise'
+gem 'colorize'
 
-# デバッグ
+gem 'devise'
 gem 'pry-byebug'
 
-# 日本語化
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 
