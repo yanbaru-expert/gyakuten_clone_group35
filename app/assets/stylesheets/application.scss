@@ -10,3 +10,10 @@
   margin: 0 auto;
   padding: 1rem;
 }
+
+// ログイン画面
+.container-login {
+  @extend .container-fluid;
+  max-width: 576px;
+  padding: 2rem;
+}
