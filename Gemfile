@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'colorize'
 
+gem 'activeadmin'
 gem 'devise'
 gem 'pry-byebug'
 
