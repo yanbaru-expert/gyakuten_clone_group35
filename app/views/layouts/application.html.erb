@@ -13,6 +13,7 @@
       <%= render partial: "layouts/header" %>
     </header>
     <main>
+    <%= render "layouts/flash" %>
       <div class="base-container">
         <%= yield %>
       </div>
@@ -21,3 +22,4 @@
     </footer>
   </body>
 </html>
+  
