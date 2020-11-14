@@ -1,0 +1,14 @@
+<div class="row">
+  <% @movies.each do |movie| %>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card border-dark mb-3">
+        <div class="card-header embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="<%= movie.url %>"  allowfullscreen></iframe>
+        </div>
+        <div class="card-body card-size">
+          <h5 class="card-title" style="font-size: 16px; padding-top: 10px;"><%= movie.title %> </h5>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
