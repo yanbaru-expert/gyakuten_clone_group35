@@ -15,3 +15,23 @@ div {
 .text-title {
   margin-top: 30px;
 }
+
+.CodeRay {
+  margin: 10px 0 50px 0;
+
+  .code {
+    overflow: auto;
+    white-space: pre-wrap;
+    background-color: #f6ffff;
+    border: 2px dashed #d6dddd;
+    margin: 0;
+
+    pre {
+      font-size: inherit;
+      color: black;
+      word-break: normal;
+      margin-top: 1rem;
+      margin-left: 0.5rem;
+    }
+  }
+}
