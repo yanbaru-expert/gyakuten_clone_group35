@@ -1,3 +1,5 @@
-<%= markdown("# テキスト教材詳細ページ") %>
-<%= markdown("~~markdown test~~") %>
-<%= markdown("`markdown`") %>
+<section id="text-contents">
+  <h2><%= markdown(@text.title) %></h2>
+  <div class="markdown">
+    <%= markdown(@text.content) %>
+  </div>
