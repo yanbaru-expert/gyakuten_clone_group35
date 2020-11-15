@@ -5,14 +5,16 @@
   <% @texts.each do |text| %>
     <div class="col-12 col-md-6 col-lg-4 text-card-container">
       <div class="card content-card border-dark mb-3">
-        <div class="card-header p-0">
-          <%= image_tag "no_image.jpg", loading: "lazy", alt: text.title, class: "img-fluid" %>
-        </div>
-        <div class="card-body text-dark text-card-body">
-          <p class="btn btn-primary btn-block">Dummy Button</p>
-          <p class="card-title text-title"><%= text.title %></p>
-          <p class="card-subtitle">【<%= text.genre %>】</p>
-        </div>
+        <%= link_to text_path(text), target: :_blank do %>
+          <div class="card-header p-0">
+            <%= image_tag "no_image.jpg", loading: "lazy", alt: text.title, class: "img-fluid" %>
+          </div>
+          <div class="card-body text-dark text-card-body">
+            <p class="btn btn-primary btn-block">Dummy Button</p>
+            <p class="card-title text-title"><%= text.title %></p>
+            <p class="card-subtitle">【<%= text.genre %>】</p>
+          </div>
+        <% end %>
       </div>
     </div>
   <% end %>
