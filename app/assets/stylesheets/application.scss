@@ -25,3 +25,8 @@ body {
   max-width: 576px;
   padding: 2rem;
 }
+
+// 動作詳細ページのページネーションを中央に
+  ul.pagination {
+    justify-content: center;
+  }
