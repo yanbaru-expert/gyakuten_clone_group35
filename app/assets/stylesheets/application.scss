@@ -15,9 +15,18 @@ body {
   padding-top: 56px;
 }
 
+.card-size {
+  height: 80px;
+}
+
 // ログイン画面
 .container-login {
   @extend .container-fluid;
   max-width: 576px;
   padding: 2rem;
 }
+
+// 動作詳細ページのページネーションを中央に
+  ul.pagination {
+    justify-content: center;
+  }
