@@ -31,4 +31,12 @@ body {
     justify-content: center;
   }
 
-  
+  // フラッシュ
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}

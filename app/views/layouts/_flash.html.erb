@@ -1,12 +1,7 @@
 <% flash.each do |flash_type, msg| %>
-<% if @user %>
-<div class="alert alert-danger">
-    <%= flash[:danger] %>
-    <% else %>
-  <div class="alert alert-info">
-    <%= flash[:info] %>
-    <% end %>
+  <div class="alert alert-<%= flash_type %>" role="alert">
     <a href="#" class="close" data-dismiss="alert">×</a>
     <%= msg %>
   </div>
 <% end %>
+
