@@ -1,7 +1,7 @@
 class TextsController < ApplicationController
   def index
     @q = Text.ransack(params[:q])
-    @texts = @q.result.(distinct: true)
+    @texts = @q.result
   end
 
   def show
