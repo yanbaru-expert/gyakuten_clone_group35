@@ -39,4 +39,10 @@ body {
 
 .alert-alert {
   @extend .alert-danger;
+
+  //<h1>タグ調整
+h1 {
+  padding: 20px 0px 10px 0px;
+  font-size: 2rem;
+  text-align: center;
 }
