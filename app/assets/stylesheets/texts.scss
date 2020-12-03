@@ -9,11 +9,20 @@ div {
     height: 370px;
     max-width: 376px;
     margin: 0 auto;
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 
 .text-title {
   margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+.text-subtitle {
+  margin-bottom: 12px;
 }
 
 .CodeRay {
@@ -35,3 +44,4 @@ div {
     }
   }
 }
+
