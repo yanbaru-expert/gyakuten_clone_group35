@@ -10,7 +10,11 @@
             <%= image_tag "no_image.jpg", loading: "lazy", alt: text.title, class: "img-fluid" %>
           </div>
           <div class="card-body text-dark text-card-body">
-            <p class="btn btn-primary btn-block">Dummy Button</p>
+            <% if @readed_text_ids.include? text.id %>
+              <p class="btn btn-secondary btn-block">読破済みを解除</p>
+            <% else %>
+              <p class="btn btn-primary btn-block">読破済みにする</p>
+            <% end %>
             <p class="text-title"><%= text.title %></p>
             <p class="text-subtitle">【<%= text.genre %>】</p>
           </div>
