@@ -12,7 +12,12 @@
 }
 
 body {
+  padding-top: 56px;
   word-break: keep-all;
+}
+
+.card-size {
+  height: 80px;
 }
 
 // ログイン画面
@@ -43,4 +48,26 @@ body {
   .menu.toggle .nav-links {
     transform: translateX(-100%);
   }
+}
+
+// 動作詳細ページのページネーションを中央に
+  ul.pagination {
+    justify-content: center;
+  }
+
+
+  //<h1>タグ調整
+h1 {
+  padding: 20px 0px 10px 0px;
+  font-size: 2rem;
+  text-align: center;
+}
+  // フラッシュ
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
 }
