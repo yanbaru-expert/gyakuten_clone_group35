@@ -19,10 +19,12 @@
             <%= image_tag "no_image.jpg", loading: "lazy", alt: text.title, class: "img-fluid" %>
           </div>
           <div class="card-body text-dark text-card-body">
-            <% if @readed_text_ids.include? text.id %>
-              <p class="btn btn-secondary btn-block">読破済みを解除</p>
+            <% if text.readed_by?(current_user) %>
+              <%= link_to "読破済みを解除", text_readed_texts_path(text.id),
+                method: :delete, class: "btn btn-secondary btn-block" %>
             <% else %>
-              <p class="btn btn-primary btn-block">読破済みにする</p>
+              <%= link_to "読破済みにする", text_readed_texts_path(text.id),
+                method: :post, class: "btn btn-primary btn-block" %>
             <% end %>
             <p class="text-title"><%= text.title %></p>
             <p class="text-subtitle">【<%= text.genre %>】</p>
