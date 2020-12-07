@@ -11,6 +11,7 @@ ja:
     updated_at: 更新日時
   activerecord:
     models:
+      readed_text: 読破済みテキスト
       text: テキスト教材
       movie: 動画教材
     attributes:
@@ -22,6 +23,9 @@ ja:
         genre: ジャンル
         title: タイトル
         url: url
+      readed_text:
+        user: ユーザー
+        text: テキスト
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

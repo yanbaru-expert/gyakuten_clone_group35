@@ -64,6 +64,16 @@ ActiveRecord::Schema.define(version: 2020_12_04_011844) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "readed_texts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "text_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["text_id"], name: "index_readed_texts_on_text_id"
+    t.index ["user_id", "text_id"], name: "index_readed_texts_on_user_id_and_text_id", unique: true
+    t.index ["user_id"], name: "index_readed_texts_on_user_id"
+  end
+
   create_table "texts", force: :cascade do |t|
     t.string "genre"
     t.string "title"
@@ -84,4 +94,6 @@ ActiveRecord::Schema.define(version: 2020_12_04_011844) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "readed_texts", "texts"
+  add_foreign_key "readed_texts", "users"
 end
