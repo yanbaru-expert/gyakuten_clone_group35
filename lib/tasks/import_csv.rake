@@ -53,3 +53,27 @@ namespace :import_csv do
     end
   end
 end
+
+namespace :import_csv do
+  desc "questionsテーブルにCSVデータをインポートするタスク"
+  task questions: :environment do
+    path = "db/csv_data/question_data.csv"
+    list = []
+    CSV.foreach(path, headers: true) do |row|
+      list << row.to_h
+    end
+    puts "質問集のインポート処理を開始"
+    begin
+      Question.transaction do
+        Question.create!(list)
+      end
+        puts "質問集のインポート完了".green
+    rescue => e
+      puts "#{e.class}: #{e.message}".red
+      puts "------------------------"
+      puts e.backtrace
+      puts "------------------------"
+      puts "質問集のインポートに失敗".red
+    end
+  end
+end
