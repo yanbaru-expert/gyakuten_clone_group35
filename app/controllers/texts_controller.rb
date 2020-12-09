@@ -1,6 +1,9 @@
 class TextsController < ApplicationController
+  @@BASIC_GENRE = ["Basic", "Git", "Ruby", "Ruby on Rails"]
+
   def index
-    @q = Text.ransack(params[:q])
+    params[:genre] ||= @@BASIC_GENRE
+    @q = Text.where(genre: params[:genre]).ransack(params[:q])
     @texts = @q.result
   end
 
