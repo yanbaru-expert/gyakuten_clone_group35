@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: "texts#index"
 
   resources :movies, only: [:index, :show]
-  resources :texts, only: %i(show) do
+  resources :texts, only: [:index, :show] do
     resource :readed_texts, only: [:create, :destroy]
   end
 end
