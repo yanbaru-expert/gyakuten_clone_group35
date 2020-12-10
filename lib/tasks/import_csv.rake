@@ -77,3 +77,27 @@ namespace :import_csv do
     end
   end
 end
+
+namespace :import_csv do
+  desc "linesテーブルにCSVデータをインポートするタスク"
+  task lines: :environment do
+    path = "db/csv_data/line_data.csv"
+    list = []
+    CSV.foreach(path, headers: true) do |row|
+      list << row.to_h
+    end
+    puts "Lineのインポート処理を開始"
+    begin
+      Line.transaction do
+        Line.create!(list)
+      end
+        puts "Lineのインポート完了".green
+    rescue => e
+      puts "#{e.class}: #{e.message}".red
+      puts "------------------------"
+      puts e.backtrace
+      puts "------------------------"
+      puts "Lineのインポートに失敗".red
+    end
+  end
+end
