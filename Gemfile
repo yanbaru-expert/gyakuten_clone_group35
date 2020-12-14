@@ -22,6 +22,7 @@ gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 gem 'redcarpet'
 gem 'coderay'
+gem 'rails_best_practices'
 
 # ページネーションの追加
 gem 'kaminari'
