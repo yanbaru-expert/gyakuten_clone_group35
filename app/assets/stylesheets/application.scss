@@ -13,6 +13,7 @@
 
 body {
   padding-top: 56px;
+  word-break: keep-all;
 }
 
 .card-size {
@@ -24,6 +25,29 @@ body {
   @extend .container-fluid;
   max-width: 576px;
   padding: 2rem;
+}
+
+// ナビバー(平列、スクロール固定、右寄せ中央）
+.nav-links {
+  display: flex;
+  height: var(--nab-height);
+  align-items: center;
+  margin-left: auto;
+}
+
+.navbar-nav>li {
+  font-size: 14px;
+}
+
+.dropdown-menu {
+  font-size: 14px;
+}
+
+//レスポンシブ
+@media screen and (max-width: 992px) {
+  .menu.toggle .nav-links {
+    transform: translateX(-100%);
+  }
 }
 
 // 動作詳細ページのページネーションを中央に
