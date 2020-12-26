@@ -1,0 +1,14 @@
+<h2>新規投稿</h2>
+ <%= render "form" %>
+
+ <table>
+  <tbody>
+    <% @questions.each.with_index(1) do |question, i| %>
+      <tr>
+        <td>
+        <button type="button" class="btn btn-outline-light btn-lg btn-block"><%= link_to question.title, question %></button>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> 
