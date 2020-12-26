@@ -1,13 +1,27 @@
 class QuestionsController < ApplicationController
-  def new
+  def index
+    @questions = Question.order(id: :desc)
     @question = Question.new
   end
 
-  def create
-    Question.create!(question_params)
+  def show
+    @question = Question.all
+    @question = Question.find(params[:id])
+    @answers = @question.answers
+    @answer = Answer.new
   end
 
+  def new
+    @question = Question.find(params[:id])
+  end
+
+  def create
+    @question = Question.create!(question_params)
+  end
+
+  private
+
   def question_params
-    params.permit(:title, :detail)
+    params.require(:question).permit(:title, :detail)
   end
 end
