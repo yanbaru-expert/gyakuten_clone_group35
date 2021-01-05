@@ -1,5 +1,6 @@
 class LinesController < ApplicationController
   def index
+    @lines = Line.order(id: :asc)
   end
 
   def show
