@@ -6,11 +6,17 @@ class LinesController < ApplicationController
   end
 
   def new
-  end
-
-  def create
-  end
-
+    
+      @line = Line.new
+   
+    end
+  
+    def create
+    
+      line = Line.create!(line_params)
+      redirect_to line
+   
+    end
   def edit
   end
 
