@@ -26,5 +26,8 @@ class LinesController < ApplicationController
   end
 
   def destroy
+    line = Line.find(params[:id])
+    line.destroy!
+    redirect_to root_path
   end
 end
