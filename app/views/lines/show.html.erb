@@ -1,3 +1,5 @@
 <h1>投稿詳細</h1>
 <p>タイトル <%= @line.title %></p>
-<p>内容 <%= @line.content %></p>
+<div class="markdown">
+ <%= markdown(@line.content) %>
+</div>
