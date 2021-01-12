@@ -1,23 +1,21 @@
-<h1 class="text-center">LINE</h1>
+<h1>LINE</h1>
 <table class="table table-bordered table-striped mt-4">
   <thead class="table-primary">
     <tr>
-      <th scope="col">No.</th>
-      <th scope="col" >ジャンル</th>
-      <th scope="col"class="w-100">内容</th>
+      <th class="w-1 align-middle">No.</th>
+      <th class="w-2 align-middle">ジャンル</th>
+      <th class="w-5 align-middle">内容</th>
     </tr>
   </thead>
   <tbody>
-     <% @lines.each.with_index(1) do |line, i| %>
+    <% @lines.each.with_index(1) do |line, i| %>
       <tr>
         <th scope="row" class="text-right"><%= i %></th>
         <td class="break-word"><%= line.genre %></td>
         <td class="text-nowrap">
-          <%= link_to line.title, line, class: "btn btn-primary" do %>
-            <span class="d-none d-md-inline"> 投稿詳細</span>
-          <% end %>
+            <%= link_to line.title, line %>
+            <% end %>
         </td>
       </tr>
-    <% end %>
   </tbody>
 </table>
