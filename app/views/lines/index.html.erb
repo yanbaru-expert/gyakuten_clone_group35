@@ -11,9 +11,9 @@
      <% @lines.each.with_index(1) do |line, i| %>
       <tr>
         <th scope="row" class="text-right"><%= i %></th>
-        <td class="break-word"><%= line.title %></td>
+        <td class="break-word"><%= line.genre %></td>
         <td class="text-nowrap">
-          <%= link_to line, class: "btn btn-primary" do %>
+          <%= link_to line.title, line, class: "btn btn-primary" do %>
             <span class="d-none d-md-inline"> 投稿詳細</span>
           <% end %>
         </td>
