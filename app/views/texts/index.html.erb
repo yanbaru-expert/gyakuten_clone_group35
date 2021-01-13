@@ -2,7 +2,7 @@
   <h1>テキスト教材</h1>
 </div>
 
-<form class="my-3 mx-auto">
+<form class="text-search my-3 mx-auto">
   <%= search_form_for @q, url: root_path do |f| %>
     <%= f.search_field :title_cont, placeholder: "タイトル検索" %>
     <%= f.search_field :genre_cont, placeholder: "ジャンル検索" %>
