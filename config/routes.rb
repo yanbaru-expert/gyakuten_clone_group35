@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resource  :readed_texts, only: [:create, :destroy]
   end
 
-  resources :lines
+  resources :lines, only: [:index, :show]
+
 end
