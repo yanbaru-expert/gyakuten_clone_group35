@@ -45,4 +45,9 @@ module ApplicationHelper
     markdown = Redcarpet::Markdown.new(html_render, options)
     markdown.render(text).html_safe
   end
+
+  def line_color
+    controller_name =='lines' ?  '#28a745;' : '#007bff'
+  end
 end
+

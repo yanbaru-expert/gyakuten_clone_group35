@@ -1,0 +1,21 @@
+<h1 id="line">LINE</h1>
+<table class="table table-bordered table-striped mt-4">
+  <thead class="line_table">
+    <tr>
+      <th class="w-1 align-middle">No.</th>
+      <th class="w-2 align-middle">ジャンル</th>
+      <th class="w-5 align-middle">内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lines.each.with_index(1) do |line, i| %>
+      <tr>
+        <th scope="row"><%= i %></th>
+        <td class="break-word"><%= line.genre %></td>
+        <td class="text-nowrap">
+            <%= link_to line.title, line %>
+            <% end %>
+        </td>
+      </tr>
+  </tbody>
+</table>
