@@ -88,8 +88,8 @@ namespace :import_csv do
     end
     puts "lineのインポート処理を開始"
     begin
-      Question.transaction do
-        Question.create!(list)
+      Line.transaction do
+        Line.create!(list)
       end
         puts "lineのインポート完了".green
     rescue => e
