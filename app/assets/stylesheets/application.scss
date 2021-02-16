@@ -3,16 +3,19 @@
  *= require_self
  */
 
-@import "bootstrap/scss/bootstrap";
+@import 'bootstrap/scss/bootstrap';
 
-.base-container {
+.wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-body {
+.base-container {
   padding-top: 56px;
+}
+
+body {
   word-break: keep-all;
 }
 
@@ -35,7 +38,7 @@ body {
   margin-left: auto;
 }
 
-.navbar-nav>li {
+.navbar-nav > li {
   font-size: 14px;
 }
 
@@ -51,11 +54,11 @@ body {
 }
 
 // 動作詳細ページのページネーションを中央に
-  ul.pagination {
-    justify-content: center;
-  }
+ul.pagination {
+  justify-content: center;
+}
 
-  // フラッシュ
+// フラッシュ
 
 .alert-notice {
   @extend .alert-info;
@@ -64,40 +67,39 @@ body {
 .alert-alert {
   @extend .alert-danger;
 }
-  //<h1>タグ調整
+//<h1>タグ調整
 h1 {
   padding: 20px 0px 10px 0px;
   font-size: 2rem;
   text-align: center;
 }
 
- //ラインページ
+//ラインページ
 th,
 td {
   vertical-align: middle !important;
-  
 }
 
 .break-word {
   word-break: break-word;
 }
 .table {
-  width:800px;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.line_content{
+.line_content {
   margin-top: 100px;
   margin-left: 200px;
   text-align: left;
-  line-height: 170%
+  line-height: 170%;
 }
 
-.line_table{
-  background-color:#28a745;
-  color:white;
+.line_table {
+  background-color: #28a745;
+  color: white;
 }
-#line{
-  color:#28a745;
+#line {
+  color: #28a745;
 }

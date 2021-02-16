@@ -47,7 +47,6 @@ module ApplicationHelper
   end
 
   def line_color
-    controller_name =='lines' ?  '#28a745;' : '#007bff'
+    controller_name == "lines" ? "#28a745;" : "#5c99ff"
   end
 end
-

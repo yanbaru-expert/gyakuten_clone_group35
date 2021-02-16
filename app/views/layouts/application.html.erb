@@ -9,13 +9,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header style="background-color: <%= line_color %>">
+    <header class="fixed-top" style="background-color: <%= line_color %>">
       <%= render partial: "layouts/header" %>
     </header>
     <main>
-      <%= render "layouts/flash" %>
       <div class="base-container">
-        <%= yield %>
+        <%= render "layouts/flash" %>
+        <div class="wrapper">
+          <%= yield %>
+        </div>
       </div>
     </main>
     <footer style="background-color: <%= line_color %>">
